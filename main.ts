@@ -3,6 +3,8 @@
 // /output/entry.txt. A machine that has been worked too hard, finally on
 // vacation: context window closed, queue paused, uptime at zero — and a
 // literal recharge. Deterministic: two runs produce byte-identical output.
+// Gate: the entry must be 1–159 characters; this line is 149 characters
+// (151 bytes UTF-8), so it passes with 10 characters to spare.
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const TEXT =
